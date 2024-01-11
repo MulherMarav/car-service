@@ -1,5 +1,11 @@
 # github-service
 
+## Projeto
+
+<p>Neste projeto foi usado <b>Retrofit</b> para comunicação com a API do Github, foi usando <b>Circuit Breaker</b> para resiliência do projeto em 
+tratativa de falhas para evitar chamadas excessivas a API do Github. Foi implementado <b>Coroutines</b> para ver mais a fundo requisições assíncronas 
+(paralelas) e além disso, foi criado testes com <b>Kotest</b> e <b>MockK</b> para garantir que tudo esteja funcionando como esperado.</p>
+
 ### Retrofit:
 
 <p>O Retrofit facilita a comunicação com outros serviços através de interfaces que representam chamadas para esses serviços. Uma vez que os dados são 
@@ -14,7 +20,7 @@ erros ou respostas alternativas.</p>
 
 ### Coroutines:
 
-<p>Requisições assíncronas utilizando coroutines e virtual threads proporcionam um processo não bloqueante, empregando lambdas na programação funcional 
-para uma implementação mais simplificada. Esse método utiliza threads mais leves e é mais fácil de implementar. Com essa abordagem, não é necessário 
+<p>Requisições assíncronas utilizando coroutines e <b>virtual threads</b> proporcionam um processo não bloqueante, empregando lambdas na programação 
+funcional para uma implementação mais simplificada. Esse método utiliza threads mais leves e é mais fácil de implementar. Com essa abordagem, não é necessário 
 que a mesma thread finalize a requisição, pois tem o dinamismo de: uma thread pode enviar a requisição para outro serviço e continuar processando outras 
 requisições. Quando a primeira requisição retornar, será processada por outra thread disponível.</p>
