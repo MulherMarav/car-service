@@ -8,10 +8,10 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.br.car</groupId>
-	<artifactId>car-service</artifactId>
+	<groupId>com.br.github</groupId>
+	<artifactId>github-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>car-service</name>
+	<name>github-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -80,6 +80,12 @@
 			<artifactId>resilience4j-retrofit</artifactId>
 			<version>1.7.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlinx</groupId>
+			<artifactId>kotlinx-coroutines-core</artifactId>
+			<version>1.6.4</version>
+			<type>pom</type>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -101,6 +107,18 @@
 			<artifactId>mockk</artifactId>
 			<version>1.12.5</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-runner-junit5-jvm</artifactId>
+			<version>5.4.1</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.jetbrains.kotlinx</groupId>
+					<artifactId>kotlinx-coroutines-bom</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 	</dependencies>
