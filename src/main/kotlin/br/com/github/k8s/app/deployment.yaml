@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github-deployment-app
+spec:
+    selector:
+      matchLabels:
+        app: github-service-app # matchLabels do service
+    template:
+        metadata:
+            labels:
+              app: github-service-app # nome do service
+        spec:
+            containers:
+              - name: github-service
+                image: mulhermarav/github-service:v2 # imagem do dockerhub
+                ports:
+                  - containerPort: 8080 # porta do container
+                env:
+                    - name: REDIS_HOST
+                      value: redis
+---
