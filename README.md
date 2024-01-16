@@ -198,3 +198,14 @@ deployment.apps/redis-deployment         1/1     1            1           17m
 NAME       STATUS   ROLES           AGE    VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION   CONTAINER-RUNTIME
 minikube   Ready    control-plane   168d   v1.27.3   192.168.49.2   <none>        Ubuntu 22.04.2 LTS   6.1.32-0-virt    docker://24.0.4
 ```
+### Instalação das tecnologias no Windows
+
+* PowerShell Admin - Instalar o instalador Choco
+
+````shell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+````
+```bash
+choco install minikube
+```
+
