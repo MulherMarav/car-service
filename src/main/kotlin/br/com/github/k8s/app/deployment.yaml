@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: github-deployment-app
+  name: github-service-app
 spec:
     selector:
       matchLabels:
